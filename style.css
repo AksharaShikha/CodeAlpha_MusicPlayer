@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #c575f4, #392486, #3c033f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.app {
+  display: flex;
+  gap: 25px;
+}
+
+.player {
+  width: 300px;
+  padding: 20px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+  text-align: center;
+}
+
+.cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+#progress, #volume {
+  width: 100%;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.controls button {
+  font-size: 22px;
+  margin: 12px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.playlist {
+  width: 220px;
+  padding: 15px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+}
+
+.song {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.song:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.song.active {
+  background: rgba(255,255,255,0.35);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 650px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .playlist {
+    width: 300px;
+  }
+}
